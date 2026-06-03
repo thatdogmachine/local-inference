@@ -1,0 +1,21 @@
+./bin/llama-server \
+    -m ~/.lmstudio/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-Q4_K_S.gguf \
+    --slot-save-path ./slots \
+    --port 1236 \
+    --host 127.0.0.1 \
+    -t 12 \
+    -tb 12 \
+    -ngl 99 \
+    --cache-ram 32768 \
+    -ctk q4_0 -ctv q4_0 \
+    --ctx-checkpoints 64 \
+    -c 262144 \
+    -fa on \
+    -np 1 \
+    --spec-type draft-mtp \
+    --spec-draft-n-max 3 \
+    --spec-draft-p-min 0.75 \
+    --reasoning off \
+    --jinja \
+    --chat-template-file ./chat-template_froggeric_qwenV19.jinja \
+    --chat-template-kwargs '{"preserve_thinking":true}' 
