@@ -6,6 +6,7 @@
     -t 12 \
     -tb 12 \
     -ngl 99 \
+    --no-context-shift \
     --cache-ram 32768 \
     -ctk q4_0 -ctv q4_0 \
     --ctx-checkpoints 64 \
